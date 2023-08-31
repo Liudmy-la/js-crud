@@ -1,0 +1,39 @@
+@use '../../lib/service.scss' as s;
+
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: s.space(10);
+	padding: 20px 50px;
+}
+
+.form--back {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	align-items: center;
+	padding: s.space(4);
+	
+	border: 1px solid s.color('light');
+	box-shadow: 0px 0px 15px s.color('light');
+	border-radius: 10px;
+
+	max-width: 100%;
+	min-width: 500px;
+}
+
+h1 {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.button--back {
+	width: 100%;
+
+	background-color: blue;
+	text-decoration: none;
+	color: s.color('light');
+
+	border-radius: 5px;
+	text-align: center;
+	padding: s.space(3);
+}

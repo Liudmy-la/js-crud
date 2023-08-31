@@ -1,0 +1,60 @@
+@use '../../lib/service.scss' as s;
+
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: s.space(10);
+	padding: 20px 50px;
+}
+
+.page__title {	
+	font-size: 24px;
+	font-weight: bold;
+	color: blue;
+}
+
+.list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: s.space(6) s.space(3);
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	padding: s.space(3);
+	gap: s.space(4);
+	
+	border: 1px solid s.color('light');
+	box-shadow: 0px 0px 10px s.color('light');
+	border-radius: 10px;
+
+	font-size: 14px;
+
+	&__title, &__price {
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	&__id {
+		color: grey;
+	}
+
+	&__link {
+		text-decoration: none;
+		color: blue;
+	}
+}
+
+.card--block {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.text--empty {
+	font-size: 20px;
+	color: red;
+	padding-left: 30px;
+}

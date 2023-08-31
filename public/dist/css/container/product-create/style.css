@@ -1,14 +1,23 @@
+.page__title {
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 32px;
+  color: blue;
+}
+
 .form {
   display: flex;
   flex-direction: column;
   padding: 16px;
   gap: 32px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 15px #ddd;
+  border-radius: 10px;
 }
 .form__title {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
-  padding-bottom: 4px;
-  border-bottom: 1px solid #ddd;
+  padding-bottom: 24px;
 }
 .form__content {
   display: grid;
@@ -19,17 +28,27 @@
   flex-direction: column;
   gap: 8px;
 }
+.form__group {
+  display: grid;
+  gap: 16px;
+}
 .form__label {
   font-size: 14px;
 }
 .form__input {
   border: 1px solid #ddd;
+  border-radius: 5px;
   padding: 8px;
 }
+.form__caption {
+  font-size: 12px;
+  color: grey;
+}
 .form__button {
-  border: 1px solid #ddd;
+  background-color: blue;
+  color: #ddd;
+  border-radius: 5px;
   padding: 8px;
-  border-radius: 20px;
 }
 
 .main {
@@ -39,10 +58,12 @@
   padding: 20px 50px;
 }
 
-.user-list li {
-  padding-right: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+.input--big {
+  height: 4em;
+}
+
+.group--2 {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 /*# sourceMappingURL=style.css.map */
