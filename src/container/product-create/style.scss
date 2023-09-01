@@ -1,16 +1,26 @@
 @use '../../lib/service.scss' as s;
 
+.page__title {	
+	font-size: 24px;
+	font-weight: bold;
+	padding-bottom: s.space(8);
+	color: blue;
+}
+
 .form {
 	display: flex;
 	flex-direction: column;
 	padding: s.space(4);
 	gap: s.space(8);
+	
+	border: 1px solid s.color('light');
+	box-shadow: 0px 0px 15px s.color('light');
+	border-radius: 10px;
 
 	&__title {
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: bold;
-		padding-bottom: s.space(1);
-		border-bottom: 1px solid s.color('light');
+		padding-bottom: s.space(6);
 	}
 
 	&__content {
@@ -24,19 +34,31 @@
 		gap: s.space(2);
 	}
 
+	&__group {
+		display: grid;
+		gap: s.space(4);
+	}
+
 	&__label {
 		font-size: 14px;		
 	}
 
 	&__input {
 		border: 1px solid s.color('light');
+		border-radius: 5px;		
 		padding: s.space(2);
 	}
 
+	&__caption {
+		font-size: 12px;
+		color: grey;
+	}
+
 	&__button {
-		border: 1px solid s.color('light');
+		background-color: blue;
+		color: s.color('light');
+		border-radius: 5px;		
 		padding: s.space(2);
-		border-radius: 20px;
 	}
 }
 
@@ -47,10 +69,10 @@
 	padding: 20px 50px;
 }
 
-.user-list {
-	li {
-		padding-right: 15px;
-		padding-top: 5px;
-		padding-bottom: 5px;
-	}
+.input--big {
+	height: 4em;
+}
+
+.group--2 {
+	grid-template-columns: repeat(2, 1fr);
 }

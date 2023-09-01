@@ -1,0 +1,35 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px 50px;
+}
+
+.form--back {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 15px #ddd;
+  border-radius: 10px;
+  max-width: 100%;
+  min-width: 500px;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.button--back {
+  width: 100%;
+  background-color: blue;
+  text-decoration: none;
+  color: #ddd;
+  border-radius: 5px;
+  text-align: center;
+  padding: 12px;
+}
+
+/*# sourceMappingURL=style.css.map */

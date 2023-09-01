@@ -1,0 +1,55 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px 50px;
+}
+
+.page__title {
+  font-size: 24px;
+  font-weight: bold;
+  color: blue;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px 12px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 16px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 10px #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.card__title, .card__price {
+  font-size: 18px;
+  font-weight: bold;
+}
+.card__id {
+  color: grey;
+}
+.card__link {
+  text-decoration: none;
+  color: blue;
+}
+
+.card--block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text--empty {
+  font-size: 20px;
+  color: red;
+  padding-left: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -58,6 +58,57 @@ class User {
 
 // ================================================================
 
+class Product {
+  static #list = []
+
+  constructor(name, price, description) {
+    this.name = name
+    this.description = description
+    this.price = price
+
+    this.id = parseInt(Math.random() * 100000)
+    this.createDate = new Date().toISOString()
+  }
+
+  static getList = () => this.#list
+
+  static add = (product) => {
+    this.#list.push(product)
+  }
+
+  static getById = (id) =>
+    this.#list.find((product) => product.id === id)
+
+  static updateById = (id, data) => {
+    const product = this.getById(id)
+
+    if (product) {
+      this.update(product, data)
+    }
+  }
+
+  static update = (user, { name, price, description }) => {
+    if (name) {
+      user.name = name
+    }
+    if (price) {
+      user.price = price
+    }
+    user.description = description
+  }
+
+  static deleteById = (id) => {
+    const index = this.#list.findIndex(
+      (product) => product.id === id,
+    )
+    if (index !== -1) {
+      this.#list.splice(index, 1)
+    }
+  }
+}
+
+// ================================================================
+
 // router.get Створює нам один ентпоїнт
 
 // ↙️ тут вводимо шлях (PATH) до сторінки
@@ -127,6 +178,97 @@ router.post('/user-update', function (req, res) {
   res.render('success-info', {
     style: 'success-info',
     info: result ? 'Email оновлено' : 'Сталася помилка',
+  })
+})
+
+// ================================================================
+router.get('/product-create', function (req, res) {
+  const { id } = req.query
+
+  res.render('product-create', {
+    style: 'product-create',
+  })
+})
+
+// ================================================================
+router.post('/product-create', function (req, res) {
+  const { name, price, description } = req.body
+
+  const product = new Product(name, price, description)
+
+  Product.add(product)
+
+  //   console.log(Product.getList())
+
+  res.render('alert', {
+    style: 'alert',
+    info: 'Товар створений',
+  })
+})
+
+// ================================================================
+router.get('/product-list', function (req, res) {
+  const list = Product.getList()
+
+  res.render('product-list', {
+    style: 'product-list',
+
+    data: {
+      products: {
+        list,
+        isEmpty: list.length === 0,
+      },
+    },
+  })
+})
+
+// ================================================================
+router.get('/product-edit', function (req, res) {
+  const { id } = req.query
+
+  const product = Product.getById(Number(id))
+  const { name, price, description } = product
+
+  res.render('product-edit', {
+    style: 'product-edit',
+
+    data: {
+      product: {
+        name,
+        price,
+        id,
+        description,
+      },
+    },
+  })
+})
+
+// ================================================================
+router.post('/product-edit', function (req, res) {
+  const { name, price, description, id } = req.body
+
+  const product = Product.getById(Number(id))
+
+  //   console.log(product, id)
+
+  Product.update(product, { name, price, description })
+
+  res.render('alert', {
+    style: 'alert',
+    info: 'Дані про продукт оновлено',
+  })
+})
+
+// ================================================================
+
+router.get('/product-delete', function (req, res) {
+  const { id } = req.query
+
+  Product.deleteById(Number(id))
+
+  res.render('alert', {
+    style: 'alert',
+    info: 'Товар видалений',
   })
 })
 
