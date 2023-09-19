@@ -1,0 +1,48 @@
+<main class="main">
+	<div class="heading">
+		<h1 class="heading__title">{{title}}</h1>
+	</div> 
+
+{{#with data.product}}
+	<form method="POST" action="/purchase-create?id={{id}}">
+		<div class="target-product">
+			<img src="{{img}}" alt="{{title}}" class="target-product__image">
+			<h2 class="product-info__title">{{title}}</h2>
+			<p class="product-info__subtitle">{{description}}</p>
+
+			{{#each category}}
+				<span class="product-info__category product-info__category--{{id}}">{{text}}</span>
+			{{/each}}
+
+			<div class="product-info__divider"></div>
+
+			{{>field label="Кількість" type="number" name="amount" value="1"}}
+
+			<button class="target-product__button">Купити зараз: {{price}} ₴</button>
+		</div>
+	</form>
+{{/with}}
+
+<div class="product-info__divider"></div>
+
+<div class="heading">
+	<h2 class="heading__title">{{info}}</h2>
+</div>
+
+<div class="product-list">
+	{{#each data.list}}
+		<div class="product-info">
+			<img src="{{img}}" alt="{{title}}" class="product-info__image">
+			<h2 class="product-info__title">{{title}}</h2>
+			<p class="product-info__subtitle">{{description}}</p>
+
+			{{#each category}}
+				<span class="product-info__category product-info__category--{{id}}">{{text}}</span>
+			{{/each}}
+
+			<a href="purchase-product?id={{id}}" class="product-info__button">Купити зараз:  {{price}} ₴</a>
+		</div>
+	{{/each}}
+</div>
+
+</main>

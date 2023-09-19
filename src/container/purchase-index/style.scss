@@ -1,0 +1,99 @@
+@use '../../lib/service.scss' as s;
+
+// @use '../../component/heading/style.scss' as heading > так підключаємо стилі компонентів
+
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: s.space(10);
+	padding: s.space(10);
+}
+
+.product-list {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: s.space(4);
+}
+
+.heading {
+	display: flex;
+	flex-direction: column;
+	gap: s.space(4);
+}
+
+.heading__title {
+	font-size: s.space(6);
+	color: black;
+}
+
+.heading__info {
+	font-size: s.space(4);
+	color: black;
+}
+
+.product-card {
+	border-radius: 10px;
+	border: 1px solid s.color('light');
+	padding: s.space(4);
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: s.space(3);
+	box-shadow: 0px 0px 10px s.color('light');
+
+	&__image {
+		max-height: 250px;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&__title {
+		font-size: s.space(5);
+		font-weight: bold;
+	}
+
+	&__subtitle {
+		font-size: s.space(4);
+		color: s.color('subtext');
+	}
+
+	&__category {
+		padding: s.space(2) s.space(3);
+		border-radius: 30px;
+		font-size: s.space(3);
+
+		font-weight: bold;
+		color: black;
+		border: 1px solid transparent;
+	}
+
+	&__category--1 {
+		border-color: blue;
+		color: blue;
+	}
+
+	&__category--2 {
+		border-color: green;
+		color: green;
+	}
+
+	&__button {
+		justify-self: flex-end;
+		text-decoration: none;
+		background-color: s.color('main');
+		color: white;
+		border: none;
+		border-radius: 5px;
+		padding: s.space(2) s.space(5);
+		font-size: 14px;
+
+		cursor: pointer;
+		transition: opacity 0.3s ease;
+	}
+
+	&__button:hover {
+		opacity: 0.7;
+	}
+}

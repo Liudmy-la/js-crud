@@ -1,5 +1,8 @@
 $colorMap: (
 	light: #ddd,
+	subtext: rgb(170, 169, 169),
+	main: blue,
+	alarm: purple,
 );
 
 	@function color ($key) {

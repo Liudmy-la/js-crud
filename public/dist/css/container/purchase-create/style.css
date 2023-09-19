@@ -1,0 +1,110 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px 50px;
+}
+
+.heading__title {
+  font-size: 32px;
+  font-weight: bold;
+  padding-bottom: 16px;
+  color: blue;
+}
+
+.subtitle {
+  font-size: 24px;
+  color: blue;
+}
+
+.heading__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 24px;
+  font-size: 16px;
+}
+
+.heading__price {
+  font-weight: bold;
+}
+
+.summary-info {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 32px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 15px #ddd;
+  border-radius: 10px;
+}
+.form__title {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 24px;
+}
+.form__content {
+  display: grid;
+  gap: 24px;
+}
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form__group {
+  display: grid;
+  gap: 16px;
+}
+.form__label {
+  font-size: 14px;
+}
+.form__input {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 8px;
+}
+.form__caption {
+  font-size: 12px;
+  color: rgb(170, 169, 169);
+}
+.form__button {
+  background-color: blue;
+  color: #ddd;
+  border-radius: 5px;
+  padding: 12px;
+  margin: 0 24px;
+  cursor: pointer;
+}
+.form__button:hover {
+  color: white;
+}
+
+.input--big {
+  height: 4em;
+}
+
+.group--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.divider {
+  border-bottom: 2px solid #ddd;
+  width: 90%;
+  margin: 4px;
+  align-self: center;
+  justify-self: center;
+}
+
+.field__disabled {
+  position: absolute;
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

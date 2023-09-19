@@ -1,0 +1,142 @@
+@use '../../lib/service.scss' as s;
+
+@use '../../component/field/style.scss' as field;
+
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: s.space(10);
+	padding: s.space(10);
+}
+
+.product-list {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: s.space(8);
+}
+
+.heading {
+	display: flex;
+	flex-direction: column;
+	gap: s.space(4);
+}
+
+.heading__title {
+	font-size: s.space(6);
+	color: black;
+}
+
+.heading__info {
+	font-size: s.space(4);
+	color: black;
+}
+
+.product-info {
+	border-radius: 10px;
+	border: 1px solid s.color('light');
+	padding: s.space(4);
+	box-shadow: 0px 0px 10px s.color('light');
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: s.space(3);
+
+	&__image {
+		max-height: 300px;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&__title {
+		font-size: s.space(5);
+		font-weight: bold;
+	}
+
+	&__subtitle {
+		font-size: s.space(4);
+		color: s.color('subtext');
+	}
+
+	&__category {
+		padding: s.space(2) s.space(3);
+		border-radius: 30px;
+		font-size: s.space(3);
+		font-weight: bold;
+		color: black;
+		border: 1px solid transparent;
+	}
+
+	&__category--1 {
+		border-color: blue;
+		color: blue;
+	}
+
+	&__category--2 {
+		border-color: green;
+		color: green;
+	}
+
+	&__button {
+		text-decoration: none;
+		background-color: s.color('main');
+		color: white;
+		border: none;
+		border-radius: 5px;
+		padding: s.space(2) s.space(5);
+		font-size: 14px;
+
+		cursor: pointer;
+		transition: opacity 0.3s ease;
+	}
+
+	&__button:hover {
+		opacity: 0.7;
+	}
+
+	&__divider {
+		border-bottom: 3px solid s.color('light');
+		width: 90%;
+		margin: s.space(5);
+		align-self: center;
+	}
+}
+
+.target-product {
+	border-radius: 5px;
+	border: 2px solid s.color('light');
+	padding: s.space(6);
+	box-shadow: 0px 0px 20px s.color('light');
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: s.space(5);
+
+	&__image {
+		max-height: 300px;
+		width: 50%;
+		object-fit: cover;
+		align-self: center;
+	}
+
+	&__button {		
+		align-self: center;
+		text-decoration: none;
+		background-color: s.color('main');
+		color: white;
+		border: none;
+		border-radius: 5px;
+		padding: s.space(5) s.space(5);
+		font-size: s.space(4);
+		font-weight: bold;
+
+		cursor: pointer;
+		transition: opacity 0.6s ease;
+	}
+
+	&__button:hover {
+		opacity: 0.5s;
+	}
+}

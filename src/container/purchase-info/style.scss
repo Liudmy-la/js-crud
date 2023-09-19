@@ -1,0 +1,69 @@
+@use '../../lib/service.scss' as s;
+
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: s.space(10);
+	padding: 20px 50px;
+}
+
+.heading__title {	
+	font-size: s.space(8);
+	font-weight: bold;
+	padding-bottom: s.space(4);
+	color: s.color('main');
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	padding: s.space(6);
+	gap: s.space(8);
+	
+	border: 1px solid s.color('light');
+	box-shadow: 0px 0px 15px s.color('light');
+	border-radius: 10px;
+	
+	&__button {
+		text-decoration: none;
+		text-align: center;
+
+		background-color: s.color('main');
+		color: s.color('light');
+		border-radius: 5px;		
+		padding: s.space(3);
+
+		cursor: pointer;
+	}
+
+	&__button:hover {
+		color: white;
+	}
+}
+
+.info-list {
+	display: flex;
+	flex-direction: column;
+	gap: s.space(4);
+
+	&__card {
+		border-bottom: 2px solid s.color('light');			
+		padding: s.space(2);
+		display: grid;
+		gap: s.space(4);
+	}
+
+	&__caption {
+		color: grey;
+		padding-bottom: s.space(1);
+	}
+
+	&__text {
+		padding-bottom: s.space(3);
+	}
+}
+
+.group--2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
