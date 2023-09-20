@@ -1,0 +1,62 @@
+<main class="main">
+	{{#with data}}
+	<form method="POST" action="/data-change?id={{id}}">
+	
+	<div class="form">	
+		<h1 class="heading__title">Інформація про замовлення</h1>
+		
+		<div class="info-list">
+			<div class="info-list__card">
+				<div class="info-list__caption">ID: </div>
+				<div class="info-list__text">{{id}}</div>
+			</div>
+	
+			<div class="info-list__card group--2">
+				<div class="">
+					<div class="info-list__caption">Ім'я:</div>
+					<div class="info-list__text">{{name}}</div>
+					<div class="info-list__caption">Телефон:</div>
+					<div class="info-list__text">{{phone}}</div>
+				</div>
+				<div class="">
+					<div class="info-list__caption">Прізвище:</div>
+					<div class="info-list__text">{{surname}}</div>
+					<div class="info-list__caption">Електронна пошта:</div>
+					<div class="info-list__text">{{email}}</div>
+				</div>
+			</div>
+
+			<div class="info-list__card">
+				<div class="">
+					<div class="info-list__caption">Назва товару:</div>
+					<div type="text" name="surname" class="info-list__text">{{product.title}}</div>
+				</div>
+				<div class="">
+					<div class="info-list__caption">Коментар:</div>
+					<div class="info-list__text">{{comment}}</div>
+				</div>
+			</div>
+
+			<div class="info-list__card group--2">
+				<div class="">
+					<div class="info-list__caption">Вартість товарів:</div>
+					<div class="info-list__text">{{productPrice}}</div>
+					<div class="info-list__caption">Сума до сплати:</div>
+					<div class="info-list__text">{{totalPrice}}</div>
+				</div>
+				<div class="">
+					<div class="info-list__caption">Вартість доставки:</div>
+					<div class="info-list__text">{{deliveryPrice}}</div>
+					<div class="info-list__caption">Нараховані бонуси:</div>
+					<div class="info-list__text">{{addbonus}}</div>
+				</div>
+			</div>
+		</div>
+					
+		<a href="/data-change?id={{id}}" class="form__button">Змінити дані</a>
+			
+	</div>
+
+	</form>
+	{{/with}}
+</main>

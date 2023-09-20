@@ -1,0 +1,138 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+.field__label {
+  font-size: 14px;
+}
+.field__input {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+}
+
+.product-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.heading__title {
+  font-size: 24px;
+  color: black;
+}
+
+.heading__info {
+  font-size: 16px;
+  color: black;
+}
+
+.product-info {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 16px;
+  box-shadow: 0px 0px 10px #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.product-info__image {
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+.product-info__title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.product-info__subtitle {
+  font-size: 16px;
+  color: rgb(170, 169, 169);
+}
+.product-info__category {
+  padding: 8px 12px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  color: black;
+  border: 1px solid transparent;
+}
+.product-info__category--1 {
+  border-color: blue;
+  color: blue;
+}
+.product-info__category--2 {
+  border-color: green;
+  color: green;
+}
+.product-info__button {
+  text-decoration: none;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.product-info__button:hover {
+  opacity: 0.7;
+}
+.product-info__divider {
+  border-bottom: 3px solid #ddd;
+  width: 90%;
+  margin: 20px;
+  align-self: center;
+}
+
+.target-product {
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  padding: 24px;
+  box-shadow: 0px 0px 20px #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.target-product__image {
+  max-height: 300px;
+  width: 50%;
+  object-fit: cover;
+  align-self: center;
+}
+.target-product__button {
+  align-self: center;
+  text-decoration: none;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 20px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.6s ease;
+}
+.target-product__button:hover {
+  opacity: 0.5s;
+}
+
+/*# sourceMappingURL=style.css.map */

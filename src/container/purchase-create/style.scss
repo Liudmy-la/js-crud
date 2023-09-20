@@ -1,0 +1,123 @@
+@use '../../lib/service.scss' as s;
+
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: s.space(10);
+	padding: 20px 50px;
+}
+
+.heading__title {	
+	font-size: s.space(8);
+	font-weight: bold;
+	padding-bottom: s.space(4);
+	color: s.color('main');
+}
+
+.subtitle{
+	font-size: s.space(6);
+	color: s.color('main');
+}
+
+.heading__info {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0 s.space(6);
+	font-size: s.space(4);
+}
+
+.heading__price {	
+	font-weight: bold;
+}
+
+.summary-info {
+	font-size: s.space(4);
+	font-weight: bold;
+	padding: s.space(3) s.space(6);
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	padding: s.space(6);
+	gap: s.space(8);
+	
+	border: 1px solid s.color('light');
+	box-shadow: 0px 0px 15px s.color('light');
+	border-radius: 10px;
+
+	&__title {
+		font-size: 18px;
+		font-weight: bold;
+		padding-bottom: s.space(6);
+	}
+
+	&__content {
+		display: grid;
+		gap: s.space(6);
+	}
+
+	&__field {
+		display: flex;
+		flex-direction: column;
+		gap: s.space(2);
+	}
+
+	&__group {
+		display: grid;
+		gap: s.space(4);
+	}
+
+	&__label {
+		font-size: 14px;		
+	}
+
+	&__input {
+		border: 1px solid s.color('light');
+		border-radius: 5px;		
+		padding: s.space(2);
+	}
+
+	&__caption {
+		font-size: 12px;
+		color: s.color('subtext');
+	}
+
+	&__button {
+		background-color: s.color('main');
+		color: s.color('light');
+		border-radius: 5px;		
+		padding: s.space(3);
+		margin: 0 s.space(6);
+
+		cursor: pointer;
+	}
+
+	&__button:hover {
+		color: white;
+	}
+}
+
+
+
+.input--big {
+	height: 4em;
+}
+
+.group--2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.divider {	
+	border-bottom: 2px solid s.color('light');
+	width: 90%;
+	margin: s.space(1);
+	align-self: center;
+	justify-self: center;
+}
+
+.field__disabled {
+	position: absolute;
+	display: none;
+}

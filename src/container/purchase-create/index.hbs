@@ -1,0 +1,71 @@
+<main class="main">
+{{#with data}}
+	<div class="form">			
+	
+		<h1 class="heading__title">Ваше замовлення</h1>
+		{{#each cart}}
+			<div class="heading__info">
+				<span class="">{{text}}</span>
+				<span class="heading__price">{{price}} ₴ </span>
+			</div>
+		{{/each}}
+
+		<div class="divider"></div>
+		
+		<h2 class="subtitle">Оформлення замовлення</h2>
+	
+
+		<form method="POST" action="/purchase-submit?id={{id}}">
+			<div class="form__content">
+				<div class="form__group group--2">
+					<div class="form__field">
+						<label for="surname" class="form__label">Прізвище</label>
+						<input type="text" name="surname" class="form__input">
+					</div>
+					<div class="form__field">
+						<label for="name" class="form__label">Ім'я</label>
+						<input type="text" name="name" class="form__input">
+					</div>
+				</div>
+				<div class="form__group group--2">
+					<div class="form__field">
+						<label for="phone" class="form__label">Мобільний телефон</label>
+						<input type="tel" name="phone" class="form__input">
+					</div>
+					<div class="form__field">
+						<label for="email" class="form__label">Електронна пошта</label>
+						<input type="email" name="email" class="form__input">
+					</div>
+				</div>
+				<div class="form__field">
+					<label for="comment" class="form__label">Коментар</label>
+					<input type="text" name="comment" class="form__input input--big">
+					<div class="form__caption">Коментар буде передано кур'єру</div>
+				</div>
+				<div class="divider"></div>
+				<div class="form__group group--2">
+					<div class="form__field">
+						<label for="bonus" class="form__label">Списати бонуси</label>
+						<input type="number" name="bonus" class="form__input">
+					</div>
+					<div class="form__field">
+						<label for="promo" class="form__label">Промо-код</label>
+						<input type="text" name="promo" class="form__input">
+					</div>
+				</div>
+				<div class="divider"></div>
+				<div class="summary-info">Всього: {{totalPrice}} ₴ (+ {{bonus}} ₴ на бонусний рахунок)</div>
+
+				<div class="field__disabled">
+					<input value="{{amount}}" type="number" name="amount" >
+					<input value="{{totalPrice}}" type="number" name="totalPrice" >
+					<input value="{{productPrice}}" type="number" name="productPrice">
+					<input value="{{deliveryPrice}}" type="number" name="deliveryPrice">
+				</div>
+
+				<button type ="submit" class="form__button">Оформити замовлення</button>
+			</div>
+		</form>
+	</div>
+{{/with}}
+</main>

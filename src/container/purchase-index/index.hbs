@@ -1,0 +1,23 @@
+<main class="main">
+	<div class="heading">
+		<h1 class="heading__title">{{title}}</h1>
+		<p class="heading__info">{{info}}</p>
+	</div>
+
+<div class="product-list">
+	{{#each data.list}}
+		<div class="product-card">
+			<img src="{{img}}" alt="{{title}}" class="product-card__image">
+			<h2 class="product-card__title">{{title}}</h2>
+			<p class="product-card__subtitle">{{description}}</p>
+
+			{{#each category}}
+				<span class="product-card__category product-card__category--{{id}}">{{text}}</span>
+			{{/each}}
+
+			<a href="purchase-product?id={{id}}" class="product-card__button">Купити зараз: {{price}} ₴</a>
+		</div>
+	{{/each}}
+</div>
+
+</main>

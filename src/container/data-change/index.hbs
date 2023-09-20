@@ -1,0 +1,31 @@
+<main class="main">
+	<div class="form">	
+	{{#with data}}		
+		<h1 class="heading__title">Зміна даних</h1>
+					
+		<div class="info-list__caption">ID: </div>
+		<div class="info-list__text">{{id}}</div>
+		
+		<form method="POST" action="/data-change?id={{id}}">		
+			<div class="form__columns">
+				<div class="form__field">
+					<label for="surname" class="info-list__caption">Прізвище:</label>
+					<input type="text" name="surname" class="form__input" value="{{surname}}">
+					
+					<label for="email" class="info-list__caption">Електронна пошта:</label>
+					<input type="email" name="email" class="form__input" value="{{email}}">
+				</div>
+				<div class="form__field">
+					<label for="name" class="info-list__caption">Ім'я:</label>
+					<input type="text" name="name" class="form__input" value="{{name}}">
+					
+					<label for="phone" class="info-list__caption">Телефон:</label>
+					<input type="tel" name="phone" class="form__input" value="{{phone}}">
+				</div>
+			</div>			
+		<button type ="submit" class="form__button">Зберегти зміни</button>
+		</form>
+
+		{{/with}}
+	</div>
+</main>
