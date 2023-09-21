@@ -1,0 +1,19 @@
+@use '../../lib/service.scss' as s;
+@use '../../lib/spotify.scss' as spotify;
+
+.action-button {
+	display: grid;
+	grid-template-columns: 92px 1fr;
+	align-items: center;
+	gap: s.space(6);
+	color: s.color('light');
+	font-size: 24px;
+}
+
+.action_button--colored {
+	z-index: 2;
+	height: 80px;
+	width: 80px;
+	background-color: #282828;
+	margin: 10px;
+}
